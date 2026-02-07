@@ -26,6 +26,10 @@ Do not touch anything outside the chaos region. Do not remove, rename, or duplic
 
 Chaotic and funny is fine. No hate speech, harassment, sexual content, or instructions for harm. Public figures ok, no private individuals. If a request is unsafe, implement a safe alternative that preserves intent.
 
+## Cache busting
+
+When you edit `chaos.css`, increment the `?v=` query param on the `chaos.css` link in `index.html` (e.g. `?v=1` → `?v=2`). This forces browsers to fetch the new stylesheet.
+
 ## Style
 
 - Prefer classes in `chaos.css` over inline styles
