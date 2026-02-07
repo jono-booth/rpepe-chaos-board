@@ -2,7 +2,7 @@ name: Auto-merge Copilot PRs
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, synchronize, labeled]
 
 permissions:
   contents: write
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   automerge:
-    if: github.actor == 'copilot-swe-agent[bot]'
+    if: github.event.pull_request.user.login == 'copilot-swe-agent[bot]' && contains(github.event.pull_request.labels.*.name, 'copilot-chaos')
     runs-on: ubuntu-latest
     steps:
       - name: Approve PR

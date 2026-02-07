@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   sanitize:
+    if: github.event.pull_request.user.login == 'copilot-swe-agent[bot]' && contains(github.event.pull_request.labels.*.name, 'copilot-chaos')
     runs-on: ubuntu-latest
     steps:
       - name: Set Copilot-only assignee/reviewer

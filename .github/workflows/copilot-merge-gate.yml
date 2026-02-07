@@ -1,0 +1,24 @@
+name: Copilot merge gate
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Allow only Copilot-authored PRs to be mergeable
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          set -euo pipefail
+          if [[ "$PR_AUTHOR" != "copilot-swe-agent[bot]" ]]; then
+            echo "This repo is configured so only Copilot-authored PRs can merge." >&2
+            echo "PR author was: $PR_AUTHOR" >&2
+            exit 1
+          fi
+          echo "Gate passed: PR authored by $PR_AUTHOR"
