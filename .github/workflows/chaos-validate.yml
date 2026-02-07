@@ -1,0 +1,36 @@
+name: Chaos validate
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths:
+      - 'chaos-board/**'
+      - 'tools/validate_chaos_pr.py'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate chaos PR
+        id: validate
+        run: |
+          python3 tools/validate_chaos_pr.py | tee validation.txt
+
+      - name: Comment on failure
+        if: failure()
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          echo "Posting validation feedback to PR"
+          gh pr review "$PR_URL" --comment --body "Chaos validation failed. Fix the following and push an update:\n\n$(cat validation.txt)"
