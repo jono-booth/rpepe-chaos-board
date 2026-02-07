@@ -1,34 +1,122 @@
 /* Editable by Copilot agent. All selectors must target .chaos-region */
 .chaos-region {
-  background-color: #333333;
-  color: #e6e6fa;
-  font-size: 24px;
-  font-weight: bold;
+  background: linear-gradient(135deg, #1a1f2e 0%, #0f1419 100%);
+  color: #e8f0f2;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.chaos-region .welcome-banner {
-  background-color: red;
-  color: white;
-  font-size: 48px;
-  font-weight: bold;
+.chaos-region .welcome-container {
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
-  padding: 20px;
-  margin-bottom: 20px;
 }
 
-.chaos-region .pepe-marquee {
-  color: #39ff14;
-  font-size: 2em;
-  font-weight: bold;
-  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
-  animation: blink-animation 1s infinite;
+.chaos-region .welcome-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  background: linear-gradient(90deg, #00d4ff, #7b68ee, #ff1493);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+  background-size: 200% 200%;
 }
 
-@keyframes blink-animation {
-  0%, 49% {
-    opacity: 1;
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
   }
-  50%, 100% {
-    opacity: 0;
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.chaos-region .welcome-message {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #b8c5d0;
+  margin: 0 0 40px 0;
+  font-weight: 400;
+}
+
+.chaos-region .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.chaos-region .feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 24px 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chaos-region .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(123, 104, 238, 0.2);
+  border-color: rgba(123, 104, 238, 0.3);
+}
+
+.chaos-region .feature-icon {
+  font-size: 3em;
+  margin-bottom: 12px;
+}
+
+.chaos-region .feature-heading {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.chaos-region .feature-text {
+  font-size: 0.95em;
+  color: #97baae;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.chaos-region .cta-section {
+  margin-top: 50px;
+  padding: 30px;
+  background: rgba(123, 104, 238, 0.1);
+  border-radius: 8px;
+  border: 2px solid rgba(123, 104, 238, 0.3);
+}
+
+.chaos-region .cta-text {
+  font-size: 1.1em;
+  color: #e8f0f2;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.chaos-region .cta-text strong {
+  color: #7b68ee;
+  font-weight: 700;
+}
+
+.chaos-region .cta-text code {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.95em;
+  color: #00d4ff;
+}
+
+@media (max-width: 600px) {
+  .chaos-region .welcome-title {
+    font-size: 2em;
+  }
+  
+  .chaos-region .feature-grid {
+    grid-template-columns: 1fr;
   }
 }
