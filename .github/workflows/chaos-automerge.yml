@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   automerge:
-    if: github.event.pull_request.user.login == 'copilot-swe-agent[bot]' && contains(github.event.pull_request.labels.*.name, 'copilot-chaos')
+    if: (github.event.pull_request.user.login == 'copilot-swe-agent[bot]' || github.event.pull_request.user.login == 'Copilot') && contains(github.event.pull_request.labels.*.name, 'copilot-chaos')
     runs-on: ubuntu-latest
     steps:
       - name: Approve PR
