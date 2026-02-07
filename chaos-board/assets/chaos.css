@@ -1,1 +1,5 @@
 /* Editable by Copilot agent. All selectors must target .chaos-region */
+
+.chaos-region h1 {
+  color: red;
+}
