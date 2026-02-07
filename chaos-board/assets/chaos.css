@@ -103,6 +103,17 @@
   font-weight: 700;
 }
 
+.chaos-region .cta-text a {
+  color: #7b68ee;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.chaos-region .cta-text a:hover {
+  color: #00d4ff;
+  text-decoration: underline;
+}
+
 .chaos-region .cta-text code {
   background: rgba(255, 255, 255, 0.12);
   padding: 2px 8px;
