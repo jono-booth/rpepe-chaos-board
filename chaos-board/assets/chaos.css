@@ -1,1 +1,9 @@
 /* Editable by Copilot agent. All selectors must target .chaos-region */
+
+.chaos-region h1 {
+  color: green;
+}
+
+.chaos-region {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
