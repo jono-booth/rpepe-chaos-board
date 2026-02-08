@@ -24,6 +24,27 @@
   -webkit-text-fill-color: transparent;
   animation: gradient-shift 3s ease infinite;
   background-size: 200% 200%;
+  position: relative;
+}
+
+.chaos-region .welcome-title::before,
+.chaos-region .welcome-title::after {
+  content: '✨';
+  position: absolute;
+  font-size: 0.5em;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.chaos-region .welcome-title::before {
+  left: -30px;
+  top: -10px;
+  animation-delay: 0s;
+}
+
+.chaos-region .welcome-title::after {
+  right: -30px;
+  top: -10px;
+  animation-delay: 1s;
 }
 
 @keyframes gradient-shift {
@@ -32,6 +53,17 @@
   }
   50% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(180deg);
   }
 }
 
