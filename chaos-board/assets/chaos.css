@@ -196,3 +196,114 @@
   margin: 15px 0;
   letter-spacing: 8px;
 }
+
+.chaos-region .giveaway-announcement {
+  max-width: 800px;
+  margin: 60px auto 0;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.15) 0%, rgba(255, 140, 0, 0.15) 100%);
+  border-radius: 12px;
+  border: 3px solid rgba(255, 140, 0, 0.6);
+  box-shadow: 0 0 30px rgba(255, 140, 0, 0.4), 0 0 60px rgba(255, 0, 0, 0.2);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.4), 0 0 60px rgba(255, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 140, 0, 0.6), 0 0 80px rgba(255, 0, 0, 0.4);
+  }
+}
+
+.chaos-region .giveaway-title {
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #ff8c00;
+  text-align: center;
+  margin: 0 0 30px 0;
+  text-shadow: 0 0 20px rgba(255, 140, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.5);
+  animation: bounce-text 1s ease infinite;
+}
+
+@keyframes bounce-text {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.chaos-region .giveaway-content {
+  text-align: center;
+}
+
+.chaos-region .giveaway-headline {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: #ff4500;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.chaos-region .giveaway-text {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 0 0 25px 0;
+}
+
+.chaos-region .giveaway-text strong {
+  color: #ff8c00;
+  font-weight: 700;
+}
+
+.chaos-region .giveaway-text a {
+  color: #ff8c00;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.chaos-region .giveaway-text a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.chaos-region .giveaway-prize {
+  font-size: 2em;
+  font-weight: 900;
+  color: #ffd700;
+  margin: 30px 0;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+  animation: shimmer 1.5s ease infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    color: #ffd700;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+  }
+  50% {
+    color: #ffed4e;
+    text-shadow: 0 0 50px rgba(255, 215, 0, 1);
+  }
+}
+
+.chaos-region .giveaway-call {
+  font-size: 1.3em;
+  line-height: 1.8;
+  color: #ffffff;
+  margin: 25px 0;
+  font-weight: 600;
+}
+
+.chaos-region .giveaway-emojis {
+  font-size: 2em;
+  margin-top: 30px;
+  letter-spacing: 10px;
+  line-height: 1.5;
+}
