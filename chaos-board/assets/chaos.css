@@ -11,12 +11,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   min-height: 400px;
+  flex-wrap: wrap;
 }
 
 .chaos-region .dancing-frog {
   max-width: 100%;
-  width: 500px;
+  width: 400px;
   height: auto;
   border-radius: 8px;
 }
