@@ -339,3 +339,39 @@
   letter-spacing: 10px;
   line-height: 1.5;
 }
+
+.chaos-region .visitor-counter {
+  max-width: 400px;
+  margin: 60px auto 0;
+  padding: 30px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 12px;
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.2);
+}
+
+.chaos-region .visitor-counter-label {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #00d4ff;
+  margin: 0 0 15px 0;
+}
+
+.chaos-region .visitor-counter-number {
+  font-size: 3em;
+  font-weight: 900;
+  color: #ffd700;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  animation: counter-glow 2s ease-in-out infinite;
+}
+
+@keyframes counter-glow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
+  }
+}
