@@ -1,96 +1,75 @@
 /* Editable by Copilot agent. All selectors must target .chaos-region */
 .chaos-region {
-  background: linear-gradient(135deg, #1a4d2e 0%, #0f3d1f 50%, #1a1a2e 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: #ffffff;
   padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.chaos-region .weather-forecast {
-  max-width: 800px;
+.chaos-region .nft-tweet {
+  max-width: 650px;
   margin: 0 auto;
-  text-align: center;
-}
-
-.chaos-region .forecast-title {
-  font-size: 2em;
-  font-weight: bold;
-  color: #4ecdc4;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: rainbow 3s linear infinite;
-}
-
-@keyframes rainbow {
-  0% { color: #ff6b6b; }
-  16% { color: #ffa500; }
-  33% { color: #ffd700; }
-  50% { color: #4ecdc4; }
-  66% { color: #45b7d1; }
-  83% { color: #9b59b6; }
-  100% { color: #ff6b6b; }
-}
-
-.chaos-region .forecast-date {
-  font-size: 1.2em;
-  color: #ffd700;
-  margin-bottom: 30px;
-  font-weight: bold;
-}
-
-.chaos-region .forecast-main {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.05);
   padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  border: 2px solid #4ecdc4;
+  border-radius: 15px;
+  border: 2px solid #1da1f2;
+  box-shadow: 0 0 20px rgba(29, 161, 242, 0.3);
+}
+
+.chaos-region .tweet-header {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #1da1f2;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chaos-region .tweet-meta {
+  font-size: 0.9em;
+  color: #8899a6;
+  margin-bottom: 20px;
   text-align: left;
 }
 
-.chaos-region .forecast-summary {
-  margin-bottom: 15px;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-.chaos-region .forecast-summary strong {
-  color: #ffd700;
-  font-size: 1.2em;
-}
-
-.chaos-region .forecast-stats {
-  background: rgba(255, 215, 0, 0.1);
+.chaos-region .tweet-content {
+  background: rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 25px;
-  border: 2px dashed #ffd700;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.chaos-region .stat-item {
+.chaos-region .tweet-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.chaos-region .tweet-stats {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-  font-size: 1.1em;
-}
-
-.chaos-region .stat-label {
-  font-weight: bold;
-  color: #4ecdc4;
-}
-
-.chaos-region .stat-value {
-  color: #ff6b6b;
-  font-weight: bold;
-}
-
-.chaos-region .forecast-footer {
-  background: rgba(255, 107, 107, 0.2);
+  flex-direction: column;
+  gap: 10px;
   padding: 15px;
+  background: rgba(29, 161, 242, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #1da1f2;
+}
+
+.chaos-region .tweet-stats .stat {
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.chaos-region .tweet-footer {
+  background: rgba(255, 215, 0, 0.15);
+  padding: 12px;
   border-radius: 10px;
-  border: 2px solid #ff6b6b;
-  font-size: 1.1em;
-  font-weight: bold;
+  border: 1px solid #ffd700;
+  font-size: 0.95em;
+  text-align: center;
   color: #ffd700;
+  font-style: italic;
 }
