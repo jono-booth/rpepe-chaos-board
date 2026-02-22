@@ -1,125 +1,86 @@
 /* Editable by Copilot agent. All selectors must target .chaos-region */
 .chaos-region {
-  background: linear-gradient(135deg, #ff1744 0%, #ff6090 25%, #ff1744 50%, #c2185b 75%, #880e4f 100%);
+  background: linear-gradient(135deg, #1a472a 0%, #2d6a4f 40%, #1b4332 100%);
   color: #ffffff;
   padding: 40px 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(255, 23, 68, 0.5), 0 0 50px rgba(255, 96, 144, 0.3);
-  animation: valentines-pulse 3s ease-in-out infinite;
+  box-shadow: 0 8px 30px rgba(0, 180, 80, 0.4), 0 0 50px rgba(45, 106, 79, 0.3);
 }
 
-@keyframes valentines-pulse {
-  0%, 100% { box-shadow: 0 8px 30px rgba(255, 23, 68, 0.5), 0 0 50px rgba(255, 96, 144, 0.3); }
-  50% { box-shadow: 0 8px 40px rgba(255, 23, 68, 0.8), 0 0 80px rgba(255, 96, 144, 0.5); }
-}
-
-.chaos-region .valentines-chaos {
+.chaos-region .chaos-welcome {
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.chaos-region .valentines-header {
-  font-size: 2.5em;
+.chaos-region .chaos-title {
+  font-size: 2.4em;
   font-weight: 900;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 30px;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
-  letter-spacing: 2px;
-  animation: valentines-glow 2s ease-in-out infinite alternate;
+  color: #a8f5a2;
+  margin-bottom: 24px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
 }
 
-@keyframes valentines-glow {
-  from { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3); }
-  to { text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.6); }
+.chaos-region .chaos-frog-container {
+  margin: 0 auto 30px;
+  display: inline-block;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  border: 4px solid #a8f5a2;
 }
 
-.chaos-region .valentines-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  padding: 35px;
-  border-radius: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+.chaos-region .chaos-frog-gif {
+  display: block;
+  max-width: 280px;
+  height: auto;
 }
 
-.chaos-region .valentines-poem {
-  font-size: 1.6em;
-  font-weight: bold;
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 30px;
-  padding: 25px;
-  background: rgba(194, 24, 91, 0.4);
-  border-radius: 15px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  line-height: 1.8;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.chaos-region .valentines-message {
-  background: rgba(0, 0, 0, 0.25);
-  padding: 25px;
-  border-radius: 15px;
-  margin-bottom: 25px;
-}
-
-.chaos-region .love-note {
-  font-size: 1.15em;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  color: #ffffff;
+.chaos-region .chaos-instructions {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 28px 32px;
+  border-radius: 16px;
+  border: 2px solid rgba(168, 245, 162, 0.35);
   text-align: left;
 }
 
-.chaos-region .special-note {
-  background: rgba(255, 215, 0, 0.2);
-  padding: 15px;
-  border-radius: 10px;
-  border-left: 5px solid #ffd700;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-
-.chaos-region .love-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  margin: 25px 0;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-}
-
-.chaos-region .love-stat {
-  font-size: 1.05em;
-  color: #ffffff;
-  font-weight: 700;
-  padding: 12px;
-  background: rgba(255, 23, 68, 0.3);
-  border-radius: 8px;
+.chaos-region .chaos-instructions-title {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #a8f5a2;
+  margin-bottom: 18px;
   text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease;
 }
 
-.chaos-region .valentines-footer {
-  text-align: center;
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 2px solid rgba(255, 255, 255, 0.3);
+.chaos-region .chaos-steps {
+  padding-left: 22px;
+  margin-bottom: 20px;
 }
 
-.chaos-region .valentines-footer p {
+.chaos-region .chaos-step {
   font-size: 1.1em;
-  color: #ffffff;
-  margin: 8px 0;
-  font-style: italic;
+  line-height: 1.8;
+  color: #e8f5e9;
+  margin-bottom: 8px;
 }
 
-.chaos-region .signature {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #ffd700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.chaos-region .chaos-code {
+  background: rgba(168, 245, 162, 0.15);
+  color: #a8f5a2;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 0.95em;
+  border: 1px solid rgba(168, 245, 162, 0.4);
+}
+
+.chaos-region .chaos-example {
+  font-size: 1em;
+  color: #c8e6c9;
+  margin-top: 10px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  border-left: 4px solid #a8f5a2;
 }
